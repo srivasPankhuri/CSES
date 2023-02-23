@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+#define ll long long int
+#define mod 1000000007
+using namespace std;
+
+int main()
+{
+  ll n,f=0,max=0;
+  string s;
+  cin>>s;
+  n=s.length();
+  char ch=s[0];
+  for(ll i=0;i<n;i++)
+  {
+    if(s[i]==ch)
+      f++;
+    else
+    {
+      if(f>max)
+        max=f;
+      f=1;
+      ch=s[i];
+    }
+  }
+  if(f>max)
+    max=f;
+  cout<<max;
+}
